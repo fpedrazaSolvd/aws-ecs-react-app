@@ -96,6 +96,7 @@ The `.config/.terraform-docs.yml` file auto generates the `README.md` file
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_terraform_state"></a> [terraform\_state](#module\_terraform\_state) | git::https://github.com/fapd777/terraform-module-state-s3-bucket.git | v26.5.1 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 6.6.0 |
 
 ## Inputs
 
