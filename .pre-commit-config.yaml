@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.105.0        # Use the latest release from GitHub
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
+#      - id: terraform_checkov
+#      - id: terraform_trivy
+
+  - repo: local
+    hooks:
+      - id: tflint-module
+        name: tflint (module-wide)
+        language: system
+        entry: tflint
+        args:
+          - --recursive
+        pass_filenames: false
+        types: [terraform]
