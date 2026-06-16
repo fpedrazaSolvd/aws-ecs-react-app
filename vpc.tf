@@ -9,7 +9,7 @@ module "vpc" {
 
   cidr = "10.0.0.0/16"
 
-  azs = [ 
+  azs = [
     "us-east-2a",
     "us-east-2b",
   ]
@@ -28,7 +28,7 @@ module "vpc" {
     "10.0.3.0/24", #>>> public_subnet_AZ_B
   ]
 
-  public_subnet_tags = {  
+  public_subnet_tags = {
     subnet_type = "public",
   }
 
