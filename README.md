@@ -82,23 +82,25 @@ The `.config/.terraform-docs.yml` file auto generates the `README.md` file
 ## Requirements
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.14.7 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.40.0 |
 
 ## Resources
 
 | Name | Type |
-| ---- | ---- |
+|------|------|
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_terraform_state"></a> [terraform\_state](#module\_terraform\_state) | git::https://github.com/fapd777/terraform-module-state-s3-bucket.git | v26.5.1 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-| ---- | ----------- | ---- | ------- | :------: |
+|------|-------------|------|---------|:--------:|
 | <a name="input_delete_on"></a> [delete\_on](#input\_delete\_on) | Date to delete the resources | `string` | n/a | yes |
 | <a name="input_developer"></a> [developer](#input\_developer) | Developer name | `string` | n/a | yes |
 | <a name="input_env_name"></a> [env\_name](#input\_env\_name) | The name of the current environment (e.g. dev, stg, prd). | `string` | n/a | yes |
@@ -112,7 +114,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-| ---- | ----------- |
+|------|-------------|
 | <a name="output_account_id"></a> [account\_id](#output\_account\_id) | Account which terraform was run on |
 | <a name="output_common_tags"></a> [common\_tags](#output\_common\_tags) | tags which should be applied to all taggable objects |
 | <a name="output_env_name"></a> [env\_name](#output\_env\_name) | string to append to all resource names |
