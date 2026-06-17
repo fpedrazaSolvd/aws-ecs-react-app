@@ -5,6 +5,13 @@
 This repository is meant to hold all of the relevant stateful Terraform code
 for for the AWS ECS cluster.
 
+AWS services used:
+- Amazon Elastic Load Balancer (ALB)
+- Amazon Elastic Container Service (ECS)
+- Amazon Virtual Private Cloud (VPC)
+
+Application URL: http://aws-ecs-poc-dev-alb-1489551277.us-east-2.elb.amazonaws.com
+
 ## Pre-commit
 
 Project maintainers can take advantage of `pre-commit` to automate various
