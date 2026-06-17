@@ -91,6 +91,11 @@ The `.config/.terraform-docs.yml` file auto generates the `README.md` file
 | Name | Type |
 |------|------|
 | [aws_alb.ecs](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/alb) | resource |
+| [aws_ecs_cluster.react_app](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/ecs_cluster) | resource |
+| [aws_ecs_service.react_app_service](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/ecs_service) | resource |
+| [aws_ecs_task_definition.container_web](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/ecs_task_definition) | resource |
+| [aws_iam_role.ecs_task_execution_role](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.ecs_task_execution_role_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_lb_listener.listener](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/lb_listener) | resource |
 | [aws_lb_target_group.ecs-http](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/lb_target_group) | resource |
 | [aws_security_group.ecs](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group) | resource |
