@@ -87,7 +87,7 @@ resource "aws_ecs_task_definition" "container_web" {
   container_definitions = jsonencode([
     {
       name  = "container-web"
-      image = "docker.io/fapd777/react-app:1.0.2"
+      image = "docker.io/fapd777/react-app:1.0.3"
       portMappings = [
         {
           containerPort = 3000
