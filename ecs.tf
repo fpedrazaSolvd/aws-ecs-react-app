@@ -46,26 +46,26 @@ resource "aws_security_group_rule" "allow_inbound_http" {
 # IAM Role for ECS Task Execution
 ################################################################################
 
-resource "aws_iam_role" "ecs_task_execution_role" {
-  name = "${var.name_prefix}-${var.env_name}-ecsTaskExecutionRole"
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Principal = {
-          Service = "ecs-tasks.amazonaws.com"
-        }
-      }
-    ]
-  })
-}
+# resource "aws_iam_role" "ecs_task_execution_role" {
+#   name = "${var.name_prefix}-${var.env_name}-ecsTaskExecutionRole"
+#   assume_role_policy = jsonencode({
+#     Version = "2012-10-17"
+#     Statement = [
+#       {
+#         Action = "sts:AssumeRole"
+#         Effect = "Allow"
+#         Principal = {
+#           Service = "ecs-tasks.amazonaws.com"
+#         }
+#       }
+#     ]
+#   })
+# }
 
-resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy_attachment" {
-  role       = aws_iam_role.ecs_task_execution_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
-}
+# resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy_attachment" {
+#   role       = aws_iam_role.ecs_task_execution_role.name
+#   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+# }
 
 ################################################################################
 # Amazon Elastic Container Service (ECS) Cluster
@@ -81,8 +81,8 @@ resource "aws_ecs_task_definition" "container_web" {
   memory                   = "1024" # 1 GB memory
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
-  task_role_arn            = aws_iam_role.ecs_task_execution_role.arn
+  execution_role_arn       = "arn:aws:iam::381511845811:role/aws-ecs-poc-dev-ecsTaskExecutionRole"
+  task_role_arn            = "arn:aws:iam::381511845811:role/aws-ecs-poc-dev-ecsTaskExecutionRole"
 
   container_definitions = jsonencode([
     {
