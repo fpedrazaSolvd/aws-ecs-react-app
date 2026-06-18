@@ -16,7 +16,7 @@ content: |-
   - Amazon Elastic Container Service (ECS)
   - Amazon Virtual Private Cloud (VPC)
 
-  Application URL: http://aws-ecs-poc-dev-alb-1489551277.us-east-2.elb.amazonaws.com
+  Application URL: http://aws-ecs-poc-dev-alb-1031624096.us-east-2.elb.amazonaws.com
 
   ## Pre-commit
 
