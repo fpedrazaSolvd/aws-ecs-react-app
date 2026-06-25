@@ -23,23 +23,13 @@ resource "aws_security_group_rule" "allow_all_egress" {
 }
 
 resource "aws_security_group_rule" "allow_inbound_react" {
-  from_port         = 3000
-  protocol          = "TCP"
-  security_group_id = aws_security_group.ecs.id
-  to_port           = 3000
-  type              = "ingress"
-  cidr_blocks       = ["0.0.0.0/0"]
-  description       = "Internet access"
-}
-
-resource "aws_security_group_rule" "allow_inbound_http" {
-  from_port         = 80
-  protocol          = "TCP"
-  security_group_id = aws_security_group.ecs.id
-  to_port           = 80
-  type              = "ingress"
-  cidr_blocks       = ["0.0.0.0/0"]
-  description       = "Internet access"
+  from_port                = 3000
+  protocol                 = "TCP"
+  security_group_id        = aws_security_group.ecs.id
+  to_port                  = 3000
+  type                     = "ingress"
+  source_security_group_id = aws_security_group.alb.id
+  description              = "Allow traffic from ALB"
 }
 
 ################################################################################

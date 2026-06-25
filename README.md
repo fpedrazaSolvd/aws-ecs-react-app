@@ -103,9 +103,11 @@ The `.config/.terraform-docs.yml` file auto generates the `README.md` file
 | [aws_ecs_task_definition.container_web](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/ecs_task_definition) | resource |
 | [aws_lb_listener.listener](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/lb_listener) | resource |
 | [aws_lb_target_group.ecs-http](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/lb_target_group) | resource |
+| [aws_security_group.alb](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group) | resource |
 | [aws_security_group.ecs](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group) | resource |
+| [aws_security_group_rule.alb_allow_all_egress](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group_rule) | resource |
+| [aws_security_group_rule.alb_allow_inbound_http](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group_rule) | resource |
 | [aws_security_group_rule.allow_all_egress](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group_rule) | resource |
-| [aws_security_group_rule.allow_inbound_http](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group_rule) | resource |
 | [aws_security_group_rule.allow_inbound_react](https://registry.terraform.io/providers/hashicorp/aws/6.40.0/docs/resources/security_group_rule) | resource |
 
 ## Modules
