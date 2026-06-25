@@ -3,7 +3,7 @@ repos:
     rev: v1.105.0        # Use the latest release from GitHub
     hooks:
       - id: terraform_fmt
-      - id: terraform_docs
+#      - id: terraform_docs
 #      - id: terraform_checkov
 #      - id: terraform_trivy
 
